@@ -9,10 +9,15 @@ The 'admin-menu.php' file within 'functions' folder actually registers the theme
 $options = get_option('plugin_options');
 $options['banner_heading'];//here it is banner_heading but its the theme string. Please change name as required
 ```
-It can be assembled using this tutorial at:
+The 'admin-menu.php' can be assembled using this tutorial at:
 http://www.sitepoint.com/wordpress-options-panel/
 
 The scss.inc.php file actually compiles the sass files within the stylesheet folder. Please note that i have used get to insert the theme string in the style.php within stylesheets folder, please comment if a better method can be used.
+
+Please also see the bootswatch.php at
+wordpress/wp-content/themes/twentyfifteen/stylesheets/bootswatch.php
+
+All these Bootswatch and Bootstrap styles are available in wordpress-bootswatch
 
 Thanks and Regards,
 Sugata
