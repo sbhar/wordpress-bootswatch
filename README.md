@@ -12,7 +12,7 @@ $options['banner_heading'];//here it is banner_heading but its the theme string.
 The 'admin-menu.php' can be assembled using this tutorial at:
 http://www.sitepoint.com/wordpress-options-panel/
 
-The scss.inc.php file actually compiles the sass files within the stylesheet folder. Please note that i have used get to insert the theme string in the style.php within stylesheets folder, please comment if a better method can be used.
+The scss.inc.php file actually compiles the sass files within the stylesheets folder. Please note that i have used get to insert the theme string in the style.php within stylesheets folder, please comment if a better method can be used.
 
 Please also see the bootswatch.php at
 ```php
