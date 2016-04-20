@@ -1,0 +1,235 @@
+//nav tabs modifications
+
+$no-margin:0;
+
+$nav-tabs-min-width: 250px;
+
+$no-border-bottom:none;
+
+.tab-pane  {
+    border-bottom-left-radius:$border-radius-base;
+	border-bottom-right-radius:$border-radius-base;
+	border-top-right-radius:$border-radius-base;
+	border:1px solid $nav-tabs-border-color;
+	position:relative;
+	z-index:-1;
+
+			
+	min-width:$nav-tabs-min-width;
+}
+
+
+
+.nav-tabs {
+    border-bottom: $no-border-bottom;
+	min-width:$nav-tabs-min-width;
+}
+
+.tab-pane h3 {
+	margin:$no-margin;
+	padding:$nav-link-padding;
+}
+
+.tab-pane p {
+	margin:$no-margin;
+	padding:$nav-link-padding;
+}
+
+
+// selectbox modifications
+
+$selectbox-height:30px;
+
+$overflow:hidden;
+
+$arrow-down-color:#bbbbbb;
+
+.select-box
+{ 
+	@include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+	height: $selectbox-height;
+    overflow: $overflow;
+	width:100%;
+	min-width:100px;
+	position:relative;
+	border:1px solid $btn-default-border;
+}
+
+.select-box select
+{
+	-webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    background:transparent;
+    border:none;
+	width:100%;
+	padding-left:5px; 
+	padding-left:0\9;
+	height:100%;
+}
+.select-box select option {
+	color:$btn-default-color;
+	background:$btn-default-bg;
+}
+@-moz-document url-prefix() {
+	.select-box select {
+		padding-left:0px;
+	}
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid $arrow-down-color;
+	border-top: 5px solid transparent\9;
+	position:absolute;
+	right:0;
+	margin: 11px 5px 0 0;
+	z-index:1;
+	pointer-events: none;
+}
+.select-box select:focus
+{
+	border:none;
+	outline:none;
+}
+
+.delimiter {
+    background: $arrow-down-color;
+	background:transparent\9;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: -16px;
+    width: 1px;
+}
+
+// Alternate buttons
+// --------------------------------------------------
+
+.select-box-default {
+  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+}
+.select-box-primary {
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+// Success appears as green
+.select-box-success {
+  @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+// Info appears as blue-green
+.select-box-info {
+  @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+// Warning appears as orange
+.select-box-warning {
+  @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+// Danger and error appear as red
+.select-box-danger {
+  @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+
+//Hover dropdown
+
+ 
+.dropdown-menu > li.kopie > a {
+    padding-left:5px;
+}
+ 
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+   top:0;left:100%;
+   margin-top:-6px;margin-left:-1px;
+   -webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;
+ }
+  
+.dropdown-submenu > a:after {
+  border-color: transparent transparent transparent #333;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  content: " ";
+  display: block;
+  float: right;  
+  height: 0;     
+  margin-right: -10px;
+  margin-top: 5px;
+  width: 0;
+}
+ 
+.dropdown-submenu:hover>a:after {
+    border-left-color:#555;
+ }
+
+.dropdown-menu > li > a:hover, .dropdown-menu > .active > a:hover {
+  text-decoration: underline;
+}  
+  
+@media (max-width: 767px) {
+
+  .navbar-nav  {
+     display: inline;
+  }
+  .navbar-default .navbar-brand {
+    display: inline;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+  .navbar-default .navbar-nav .dropdown-menu > li > a {
+    color: red;
+    background-color: #ccc;
+    border-radius: 4px;
+    margin-top: 2px;   
+  }
+   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+     color: #333;
+   }
+   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+     background-color: #ccc;
+   }
+
+   .navbar-nav .open .dropdown-menu {
+     border-bottom: 1px solid white; 
+     border-radius: 0;
+   }
+  .dropdown-menu {
+      padding-left: 10px;
+  }
+  .dropdown-menu .dropdown-menu {
+      padding-left: 20px;
+   }
+   .dropdown-menu .dropdown-menu .dropdown-menu {
+      padding-left: 30px;
+   }
+   li.dropdown.open {
+    border: 0px solid red;
+   }
+
+}
+ 
+@media (min-width: 768px) {
+  ul.nav li:hover > ul.dropdown-menu {
+    display: block;
+  }
+  #navbar {
+    text-align: center;
+  }
+}  
+
+/*customizations for wordpress
+body:before{background-color:transparent}
+.site-header, .content-area *{background:transparent;}
+.site-info a, .site-footer{background-color:transparent;color:gray}
+.site-info a, .site-footer{color:gray}
+.posted-on, .byline, .cat-links, .tags-links, .comments-link, .entry-format, .full-size-link, .edit-link { text-shadow: white 1px 1px}
+.hentry + .hentry {margin-top:0;padding-top:0}
+.entry-content, .entry-summary {padding-bottom:0}
+.hentry {padding-top: 4.3333%;}
+.site-footer{margin-top:20px;}
+.pagination {margin: 1px 0 42px;}*/

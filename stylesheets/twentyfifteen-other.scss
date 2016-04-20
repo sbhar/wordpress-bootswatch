@@ -1,0 +1,65 @@
+body:before, .hentry, .site-header, .secondary {
+	background-color: $jumbotron-bg;
+}
+.site-header {
+	border-bottom:1px solid rgba(0, 0, 0, 0.6);
+}
+@media screen and (min-width: 38.75em) {
+	.site-header {
+		border-bottom:1px solid transparent;
+	}
+}
+.entry-footer {
+	background-color: $navbar-inverse-bg;
+}
+.entry-footer a, .posted-on:before, .byline:before, .cat-links:before, .tags-links:before, .comments-link:before, .entry-format:before, .edit-link:before, .full-size-link:before {
+	color: $navbar-inverse-link-color;
+}
+.entry-footer a:hover {
+	color: $navbar-inverse-link-hover-color;
+	border-bottom: none;
+}
+
+.pagination {
+	background-color: $jumbotron-bg;
+	display:block;
+	magin-left:0;
+	margin-right:0;
+	border-radius:0;
+    .nav-links {
+      min-height: 3.465em;
+    }
+    .page-numbers {
+      line-height: 3.2em;
+      padding: 0 0.8em;
+    }
+    .prev, .next {
+      height: 48px;
+      padding: 0;
+      width: 48px;
+    }
+    .prev:before, .next:before {
+      height: 48px;
+      line-height: 48px;
+      width: 48px;
+    }
+}
+
+@media screen and (min-width: 38.75em) {
+	.pagination {
+		margin: 8.333% 8.333% 0;
+	}
+}
+  
+.site-footer {
+	background-color: $jumbotron-bg;
+}
+
+.site-info a {
+	color: $pager-disabled-color;
+}
+.site-info a:hover {
+	color: $pager-disabled-color;
+	border-bottom: none;
+}
+ 

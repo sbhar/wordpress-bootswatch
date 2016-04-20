@@ -1,0 +1,32 @@
+//Import bootstrap-sprockets
+	
+		@import "twentyfifteen";
+	
+		@import "bootstrap-sprockets";
+
+
+		// Import slate variables
+		@import "bootswatch/spacelab/variables";
+
+		// Then bootstrap itself
+		@import "bootstrap";
+
+		// Bootstrap body padding for fixed navbar
+		//body { padding-top: 50px; }
+
+		// And finally bootswatch style itself
+		@import "bootswatch/spacelab/bootswatch";
+		
+		// Import awesome checkbox code
+		@import "awesome-bootstrap-checkbox";
+		
+		// Whatever application styles you have go last
+		@import "base";
+		
+		//Load the particular wordpress theme styles
+		//@import "twentyfifteen-spacelab";
+		
+		//Load the other than twentyfifteen default wordpress theme styles
+		@import "twentyfifteen-other";
+		
+	
