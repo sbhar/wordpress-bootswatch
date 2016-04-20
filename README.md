@@ -15,8 +15,9 @@ http://www.sitepoint.com/wordpress-options-panel/
 The scss.inc.php file actually compiles the sass files within the stylesheet folder. Please note that i have used get to insert the theme string in the style.php within stylesheets folder, please comment if a better method can be used.
 
 Please also see the bootswatch.php at
+```php
 wordpress/wp-content/themes/twentyfifteen/stylesheets/bootswatch.php
-
+```
 All these Bootswatch and Bootstrap styles are available in wordpress-bootswatch
 
 Thanks and Regards,
