@@ -4,10 +4,11 @@ Bootswatch themer for Wordpress controllable from wordpress admin enhancing Twen
 Please Unzip and put the files in the theme folder of Twentyfifteen theme that is in
 wordpress/wp-content/themes/twentyfifteen/
 
-The 'admin-menu.php' file within 'functions' folder actually registers the theme string which is called like this from header.php
+The 'admin-menu.php' file within 'functions' folder actually registers the theme string in wordpress admin which is called like this from header.php.
+```php
 $options = get_option('plugin_options');
-$options['banner_heading']//here it is banner_heading but its the theme string. Please change name as required
-
+$options['banner_heading'];//here it is banner_heading but its the theme string. Please change name as required
+```
 It can be assembled using this tutorial at:
 http://www.sitepoint.com/wordpress-options-panel/
 
